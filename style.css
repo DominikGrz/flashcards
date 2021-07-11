@@ -1,0 +1,272 @@
+@font-face{
+    font-family: jp;
+    src: url(fonts/NotoSansJP-Thin.otf);
+}
+
+@font-face{
+    font-family: jpReg;
+    src: url(fonts/NotoSansJP-Regular.otf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+
+    color: rgb(0, 0, 0);
+    font-family: jp;
+
+    
+
+    text-decoration: none;
+}
+
+/*/////////////////////////////NAV////////////////////////////*/
+nav{
+    height: 75px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-bottom: solid 2px rgba(148, 148, 148, 0.651);
+}
+
+a:nth-child(1){
+    margin: 0;
+}
+
+nav a{
+    position: relative;
+    left: calc(50% - 200px);
+    top: 21.5px;
+    font-size: 18px;
+    margin-left: 100px;
+    letter-spacing: 0.5;
+    
+
+    transition: opacity 0.6s;
+}
+
+nav a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -20%;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+nav a:hover::before{
+    visibility: visible;
+    width: 100%;
+}
+
+nav a:hover{
+    opacity: 0.775;
+}
+/*/////////////////////////////NAV ENDE////////////////////////////*/
+
+
+/*/////////////////////////////MAIN CONTENT////////////////////////////*/
+
+.container{
+    display: grid;
+
+    grid-template-columns: 0.55fr 1.65fr 0.95fr 0.55fr;
+    grid-template-rows: 100px auto 60px;
+    gap: 5px 5px;
+    grid-template-areas: 
+    ". header . ." 
+    ". set stats ." 
+    "footer footer footer footer";
+}
+
+.header{
+    padding: 25px 10px;
+    grid-area: header;
+}
+
+.statistics{
+    display: flex;
+    text-align: center;
+    flex-flow: column;
+
+    grid-area: stats;
+}
+
+.stat-item{
+    border: solid 2px rgba(148, 148, 148, 0.651);
+    border-radius: 10px;
+    margin: 10px;
+    margin-left: 0;
+    width: 100%;
+    min-height: 100px;
+}
+
+.flex{
+    display: flex;
+    width: 810px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin: 0;
+
+    grid-area: set;
+}
+
+.item{
+    text-align: center;
+    border: solid 2px rgba(148, 148, 148, 0.651);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 25px 10px;
+    width: 225px;
+}
+
+.item h2{
+    margin-bottom: 35px;
+}
+
+.item a{
+    font-family: jpReg;
+
+    position: relative;
+    border-radius: 50px;
+    font-size: 14px;
+    color: #FFF;
+    box-shadow: 0 5px 0 rgb(116, 42, 9);
+    background-color: rgb(240, 89, 18);
+    padding: 10px 50px;
+}
+
+.item a:hover{
+    background-color: rgb(190, 72, 17);
+}
+
+.item a:active{
+    top: 5px;
+    box-shadow: none;
+}
+
+#link{
+    color: rgb(240, 89, 18);
+    transition: color 0.3s;
+}
+
+#link:hover{
+    color: rgb(170, 62, 12);
+}
+
+
+
+
+
+/*/////////////////////////////MISC////////////////////////////*/
+
+
+.no-set{
+    text-align: center;
+    border: solid 2px rgba(148, 148, 148, 0.651);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 25px 10px;
+    width: 100%;
+}
+
+.footer{
+    border-top: solid 2px rgba(148, 148, 148, 0.651);
+    width: 100%;
+    margin-top: 10px;
+    height: 60px;
+    text-align: center;
+    background-color: rgb(206, 206, 206);
+    grid-area: footer;
+    position: sticky;
+}
+
+#inner{
+    margin-top: 50px;
+}
+
+#learn-card{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 24px;
+    box-shadow: 0px 12px 12px rgba(29, 29, 29, 0.651);
+    width: 200px;
+    padding: 2.5% 5%;
+    min-height: 375px;
+    backface-visibility: hidden;
+
+    transition: transform 2.5s;
+}
+
+#learn-card:hover{ 
+    transform: rotateY(360deg);
+}
+
+#learn-card--correct{
+    background-color: rgb(127, 250, 127);
+}
+
+#learn-card--incorrect{
+    background-color: rgb(255, 102, 102);
+}
+
+#input-form{
+    margin: 50px auto;
+    width: 375px;
+}
+
+#set-name{
+    font-size: 40px;
+}
+
+#req-word{
+    text-align: center;
+    font-size: 24px;
+}
+
+#pfp{
+    border: solid 2px rgba(148, 148, 148, 0.651);
+    border-radius: 50%;
+    margin: 10px;
+    margin-left: 20px;
+    width: 75px;
+    height: 75px;
+    background-color: gray;
+}
+
+#pf-name{
+    position: relative;
+    font-size: 26px;
+    left: 80px;
+}
+
+input[type=submit]{
+    font-family: 'Calibri';
+
+    position: relative;
+    color: #fff;
+    padding: 10px 50px;
+    border: none;
+    width: 75%;
+    background-color: rgb(240, 89, 18);
+    box-shadow: 0 5px 0 rgb(116, 42, 9);
+
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    background-color: rgb(190, 72, 17);
+}
+
+input[type=submit]:active{
+    top: 5px;
+    box-shadow: none;
+}
+
+
+
+
+
+/*///////////////////////////// MISC ENDE////////////////////////////*/

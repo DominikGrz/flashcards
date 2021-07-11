@@ -1,0 +1,19 @@
+{
+        "name": "",
+        "vocabulary":[
+          {"word": "", "answer": ""}
+        ]
+}
+
+
+0 flashcard = 
+        <h1>なに?!</h1>
+        Looks like you have not created a set yet. Click <a id="link" href="create.php">here</a> 
+        to create your first set!
+
+Set Format =
+        <div class="item">
+            <h2>Set 1</h2>
+                
+            <a href="#">LEARN</a>
+        </div>
